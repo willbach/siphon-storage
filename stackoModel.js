@@ -9,9 +9,8 @@ var sequelize = new Sequelize('siphon', 'siphon', 'testingsiphonwithansible', {
 });
 
 const Stacks = sequelize.define('stacks', {
-  id: {
-    type: Sequelize.STRING,
-    primaryKey: true
+  post: {
+    type: Sequelize.STRING
   },
   date: {
     type: Sequelize.DATE
@@ -28,7 +27,7 @@ sequelize
 .sync({force: true})
 .then(function(err) {
   console.log('Stackoverflow table created!');
-}, function (err) { 
+}, function (err) {
   console.log('An error occurred while creating the table:', err);
 });
 
