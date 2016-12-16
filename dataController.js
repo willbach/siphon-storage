@@ -6,7 +6,6 @@ module.exports = {
     //delete the url property
     const data = req.body.data.map( (ele) => ele.data);
     console.log('the amount of data is', data.length);
-    data.forEach( (ele) => console.log(ele.id));
 
     Stacks.bulkCreate(data)
     .then( (result) => {
