@@ -10,7 +10,8 @@ var sequelize = new Sequelize('siphon', 'siphon', 'testingsiphonwithansible', {
 
 const Stacks = sequelize.define('stacks', {
   post: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    primaryKey: true
   },
   date: {
     type: Sequelize.DATE
