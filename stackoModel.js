@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 const pg = require('pg');
 
 var sequelize = new Sequelize('siphon', 'siphon', 'testingsiphonwithansible', {
-  host: '138.68.62.90',
+  host: 'localhost',
   dialect: 'postgres',
 
   ssl: true
