@@ -9,7 +9,7 @@ module.exports = {
     });
     Promise.all(queries)
     .then( (result) => console.log('added or modified ' + queries.length + ' rows'))
-    .catch( (err) => console.log(err));
+    .catch( (err) => console.log('there were some errors'));
 
     console.log('the amount of data is', data.length);
 
