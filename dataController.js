@@ -5,7 +5,7 @@ module.exports = {
 
     //delete the url property
     const queries = req.body.data.map( (piece) => {
-      return Stacks.upsert(piece.data);
+      if(piece.data.post) return Stacks.upsert(piece.data);
     });
     Promise.all(queries)
     .then( (result) => console.log('added or modified ' + queries.length + ' rows'))
