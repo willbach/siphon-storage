@@ -4,19 +4,16 @@ module.exports = {
   saveData: function(req, res) {
 
     //delete the url property
-    const data = req.body.data.map( (ele) => ele.data);
+    const queries = req.body.data.map( (piece) => {
+      return Stacks.upsert(piece.data);
+    });
+    Promise.all(queries)
+    .then( (result) => console.log('added or modified ' + queries.length + ' rows'))
+    .catch( (err) => console.log(err));
+
     console.log('the amount of data is', data.length);
 
-    Stacks.bulkCreate(data)
-    .then( (result) => {
-      console.log('added ' + data.length + ' rows');
-      res.end();
-    })
-    .catch( (err) => {
-      console.log('error saving ' + data.length + ' jobs to database');
-      console.log(err);
-      res.end();
-    });
+    res.end();
   }
 
 }
