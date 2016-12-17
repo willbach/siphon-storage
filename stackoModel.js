@@ -25,7 +25,7 @@ const Stacks = sequelize.define('stacks', {
 });
 
 sequelize
-.sync({force: true})
+.sync()
 .then(function(err) {
   console.log('Stackoverflow table created!');
 }, function (err) {
