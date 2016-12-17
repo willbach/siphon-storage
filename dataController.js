@@ -1,7 +1,7 @@
 const Stacks = require('./stackoModel');
 
 module.exports = {
-  saveData: function(req, res) {
+  stackOverflow: function(req, res) {
 
     //delete the url property
     const queries = req.body.data.map( (piece) => {

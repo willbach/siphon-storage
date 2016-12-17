@@ -10,7 +10,7 @@ app.use(bodyParser.json(), bodyParser.urlencoded({extended: true}));
 
 
 
-app.post('/data', dataController.saveData);
+app.post('/stackoverflow', dataController.stackOverflow);
 
 
 
