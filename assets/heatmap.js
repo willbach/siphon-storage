@@ -448,20 +448,20 @@ var Canvas2dRenderer = (function Canvas2dRendererClosure() {
 
         // update renderBoundaries
         //modified by Will G
-      //   if (rectX < this._renderBoundaries[0]) {
-      //       this._renderBoundaries[0] = rectX;
-      //     }
-      //     if (rectY < this._renderBoundaries[1]) {
-      //       this._renderBoundaries[1] = rectY;
-      //     }
-      //     if (rectX + 2*radius > this._renderBoundaries[2]) {
-      //       this._renderBoundaries[2] = rectX + 2*radius;
-      //     }
-      //     if (rectY + 2*radius > this._renderBoundaries[3]) {
-      //       this._renderBoundaries[3] = rectY + 2*radius;
-      //     }
+        // if (rectX < this._renderBoundaries[0]) {
+        //   this._renderBoundaries[0] = rectX;
+        // }
+        // if (rectY < this._renderBoundaries[1]) {
+        //   this._renderBoundaries[1] = rectY;
+        // }
+        // if (rectX + 2*radius > this._renderBoundaries[2]) {
+        //   this._renderBoundaries[2] = rectX + 2*radius;
+        // }
+        // if (rectY + 2*radius > this._renderBoundaries[3]) {
+        //   this._renderBoundaries[3] = rectY + 2*radius;
+        // }
 
-      // }
+      }
     },
     _colorize: function() {
       var x = this._renderBoundaries[0];
