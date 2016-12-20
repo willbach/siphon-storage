@@ -69,8 +69,8 @@ var Store = (function StoreClosure() {
         }
 
         if (!store[x][y]) {
-          store[x][y] = 10;
-          radi[x][y] = radius;
+          store[x][y] = value;
+          radi[x][y] = 1;
         } 
         //modified by Will G
         else {
