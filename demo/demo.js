@@ -25,21 +25,21 @@ app.get('/temperatures', (req, res) => {
   .then( (data) => {
     console.log('here is the data', data.length);
 
-    data = data.map( (datum) => {
-      let zipData = zipcodes.lookup(Number(datum.zip));
-      return { temp: datum.temp, lat: zipData.latitude, lng: zipData.longitude }
+    let newData = [];
+    data.forEach( (datum) => {
+      let zipData = zipcodes.lookup(datum.zip);
+      if(zipData === undefined) return {};
+      if(datum.temp && zipData.latitude && zipData.longitude) newData.push( { temp: datum.temp, lat: zipData.latitude, lng: zipData.longitude });
     })
-
-    console.log('a piece of data', data[0].temp)
 
     let interval = 10;
     let bunch = 200;
-    let bunches = Math.ceil(data.length / bunch);
+    let bunches = Math.ceil(newData.length / bunch);
 
-    for(i = 0; i < data.length; i += bunch) {
+    for(i = 0; i < newData.length; i += bunch) {
       let temps = [];
-      for(j = 0; j < bunch && data[j]; j++) {
-        temps.push(data[i+j]);
+      for(j = 0; j < bunch && data[i+j]; j++) {
+        temps.push(newData[i+j]);
       }
       console.log('bunch of temps for ya', temps.length);
       setTimeout( () => {
@@ -54,7 +54,7 @@ app.get('/temperatures', (req, res) => {
 
 io.on('connection', (client) => {
   console.log('client connected');
-  
+
   client.on('disconnect', () => {
     console.log('client disconnected');
   });
