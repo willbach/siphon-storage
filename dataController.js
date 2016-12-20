@@ -27,18 +27,6 @@ module.exports = {
     .catch( (err) => console.log('there were some errors'));
 
     res.end();
-  },
-  getTemps: function(req, res) {
-    console.log('requesting temps');
-    Temperatures.findAll()
-    .then( (data) => {
-      console.log('here is the data', data.length);
-    })
-    res.end();
-    
-
-    io.emit('game update', newState);
-
   }
 }
 
