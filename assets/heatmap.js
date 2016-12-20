@@ -71,9 +71,11 @@ var Store = (function StoreClosure() {
         if (!store[x][y]) {
           store[x][y] = value;
           radi[x][y] = radius;
-        } else {
-          store[x][y] += value;
-        }
+        } 
+        //modified by Will G
+        // else {
+        //   store[x][y] += value;
+        // }
         var storedVal = store[x][y];
 
         if (storedVal > max) {
@@ -424,12 +426,11 @@ var Canvas2dRenderer = (function Canvas2dRendererClosure() {
         var radius = point.radius;
         // if value is bigger than max
         // use max as value
+
         var value = Math.min(point.value, max);
         var rectX = x - radius;
         var rectY = y - radius;
         var shadowCtx = this.shadowCtx;
-
-
 
 
         var tpl;
@@ -447,19 +448,19 @@ var Canvas2dRenderer = (function Canvas2dRendererClosure() {
         shadowCtx.drawImage(tpl, rectX, rectY);
 
         // update renderBoundaries
-        //modified by Will G
-        // if (rectX < this._renderBoundaries[0]) {
-        //   this._renderBoundaries[0] = rectX;
-        // }
-        // if (rectY < this._renderBoundaries[1]) {
-        //   this._renderBoundaries[1] = rectY;
-        // }
-        // if (rectX + 2*radius > this._renderBoundaries[2]) {
-        //   this._renderBoundaries[2] = rectX + 2*radius;
-        // }
-        // if (rectY + 2*radius > this._renderBoundaries[3]) {
-        //   this._renderBoundaries[3] = rectY + 2*radius;
-        // }
+
+        if (rectX < this._renderBoundaries[0]) {
+          this._renderBoundaries[0] = rectX;
+        }
+        if (rectY < this._renderBoundaries[1]) {
+          this._renderBoundaries[1] = rectY;
+        }
+        if (rectX + 2*radius > this._renderBoundaries[2]) {
+          this._renderBoundaries[2] = rectX + 2*radius;
+        }
+        if (rectY + 2*radius > this._renderBoundaries[3]) {
+          this._renderBoundaries[3] = rectY + 2*radius;
+        }
 
       }
     },
@@ -541,6 +542,7 @@ var Canvas2dRenderer = (function Canvas2dRendererClosure() {
 
       value = (Math.abs(max-min) * (data/255)) >> 0;
 
+      console.log('value to be rendered', value)
       return value;
     },
     getDataURL: function() {
