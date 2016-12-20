@@ -36,6 +36,7 @@
       });
     }
     var colors = {
+      '-20': '#1E2CBD',
       '-10': '#1E28C9',
       '0': '#288DE1',
       '10': '#28BFE1',
@@ -82,19 +83,19 @@
               
               var datum = data[i];
               var temp = Math.ceil(Number(datum.temp) / 10) * 10;
-              // Add the circle for this city to the map.
-              var cityCircle = new google.maps.Circle({
-                strokeColor: colors[temp],
-                strokeOpacity: 0.2,
-                strokeWeight: 1,
-                fillColor: colors[temp],
-                fillOpacity: 0.2,
-                map: map,
-                center: { lat: datum.lat, lng: datum.lng },
-                radius: 50000
-              });
-            } else {
-              console.log('no data')
+              if(colors[temp]) {
+                // Add the circle for this city to the map.
+                var cityCircle = new google.maps.Circle({
+                  strokeColor: colors[temp],
+                  strokeOpacity: 0.2,
+                  strokeWeight: 1,
+                  fillColor: colors[temp],
+                  fillOpacity: 0.2,
+                  map: map,
+                  center: { lat: datum.lat, lng: datum.lng },
+                  radius: 50000
+                });
+              }
             }
           }
         }
