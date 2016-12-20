@@ -24,6 +24,7 @@ app.get('/temperatures', (req, res) => {
     console.log('here is the data', data.length);
     let interval = 10;
     let bunch = 200;
+    let bunches = Math.ceil(data.length / bunch);
 
     for(i = 0; i < data.length; i += bunch) {
       let temps = [];
@@ -31,7 +32,9 @@ app.get('/temperatures', (req, res) => {
         temps.push(data[i+j]);
       }
       console.log('bunch of temps for ya', temps.length);
-      io.emit('temps', temps);
+      setTimeout( () => {
+        io.emit('temps', temps);
+      }, interval * bunches);
     }
 
   })
