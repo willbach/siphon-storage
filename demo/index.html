@@ -26,9 +26,10 @@
 
   </div>
   <script>
+    var map;
     function initMap() {
       // Create the map.
-      var map = new google.maps.Map(document.getElementById('map-canvas'), {
+      map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 4,
         center: {lat: 40, lng: -100.1},
         mapTypeId: 'terrain'
