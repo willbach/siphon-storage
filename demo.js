@@ -15,13 +15,7 @@ app.post('/stackoverflow', dataController.stackOverflow);
 
 app.post('/temperatures', dataController.temperatures);
 
-app.get('/temperatures', (req, res) => {
-  let newState = req.body;
-  res.end();
-  console.log('game update', newState);
-  io.emit('game update', newState);
-  
-});
+app.get('/temperatures', dataController.getTemps);
 
 io.on('connection', (client) => {
   console.log('client connected');
