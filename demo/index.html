@@ -12,7 +12,7 @@
 <body>
   <h1>USA Temperatures</h1>
 
-  <div id="map-canvas" class="heatmap" style="postion: relative; height: 600px; width: 1000px">
+  <div id="map-canvas" class="heatmap" style="postion: relative; height: 500px; width: 1000px">
 
   </div>
   <script>
@@ -31,7 +31,7 @@
       heatmap = new HeatmapOverlay(map, 
         {
           // radius should be small ONLY if scaleRadius is true (or small radius is intended)
-          "radius": 1,
+          "radius": 3,
           "maxOpacity": 1, 
           // scales the radius based on map zoom
           "scaleRadius": false, 
