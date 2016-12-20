@@ -59,7 +59,7 @@
         }
         console.log(data.length)
         //build up the points if this is the last piece
-        if(newData.length < 900) {
+        if(newData.length < 200) {
           console.log('last piece')
           // Construct the circle for each value in citymap.
           // Note: We scale the area of the circle based on the population.
@@ -75,7 +75,7 @@
                 fillOpacity: 0.5,
                 map: map,
                 center: { lat: datum.lat, lng: datum.lng },
-                radius: 1000
+                // radius: 1000
               });
             } else {
               console.log('no data')
