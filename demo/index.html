@@ -35,6 +35,20 @@
         mapTypeId: 'terrain'
       });
     }
+    var colors = {
+      '-10': '#1E28C9',
+      '0': '#288DE1',
+      '10': '#28BFE1',
+      '20': '#28E1B4',
+      '30': '#28E163',
+      '40': '#A1E227',
+      '50': '#D7E227',
+      '60': '#E5BD29',
+      '70': '#E88024',
+      '80': '#E86E24',
+      '90': '#E83324'
+    }
+
     $(document).ready( function() {
       var data = [];
 
@@ -65,17 +79,19 @@
           // Note: We scale the area of the circle based on the population.
           for (var key in newData) {
             if(newData[key]) {
+              
               var datum = data[key];
+              var temp = Math.ceil(Number(datum.temp) / 10) * 10;
               // Add the circle for this city to the map.
               var cityCircle = new google.maps.Circle({
-                strokeColor: '#FF0000',
-                strokeOpacity: 0.5,
+                strokeColor: colors[temp],
+                strokeOpacity: 0.2,
                 strokeWeight: 1,
-                fillColor: '#FF0000',
-                fillOpacity: 0.5,
+                fillColor: colors[temp],
+                fillOpacity: 0.2,
                 map: map,
                 center: { lat: datum.lat, lng: datum.lng },
-                radius: 100000
+                radius: 10000
               });
             } else {
               console.log('no data')
