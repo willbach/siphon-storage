@@ -77,10 +77,10 @@
           console.log('last piece')
           // Construct the circle for each value in citymap.
           // Note: We scale the area of the circle based on the population.
-          for (var key in data) {
-            if(data[key]) {
+          for (var i = 0; i < data.length; i+=100) {
+            if(data[i]) {
               
-              var datum = data[key];
+              var datum = data[i];
               var temp = Math.ceil(Number(datum.temp) / 10) * 10;
               // Add the circle for this city to the map.
               var cityCircle = new google.maps.Circle({
