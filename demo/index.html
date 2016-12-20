@@ -68,14 +68,14 @@
               var datum = data[key];
               // Add the circle for this city to the map.
               var cityCircle = new google.maps.Circle({
-                // strokeColor: '#FF0000',
-                // strokeOpacity: 0.8,
-                // strokeWeight: 0,
-                fillColor: '#FF0000',
-                fillOpacity: 0.35,
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.8,
+                strokeWeight: 0,
+                fillColor: '#FFFF00',
+                fillOpacity: 0.2,
                 map: map,
                 center: { lat: datum.lat, lng: datum.lng },
-                radius: 4
+                radius: 20
               });
             } else {
               console.log('no data')
