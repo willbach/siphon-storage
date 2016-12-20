@@ -70,13 +70,14 @@ var Store = (function StoreClosure() {
 
         if (!store[x][y]) {
           store[x][y] = value;
-          radi[x][y] = 1;
-        } 
+          radi[x][y] = 3;
+        }
         //modified by Will G
         else {
           // store[x][y] += value;
         }
         var storedVal = store[x][y];
+        console.log(storedVal)
 
         if (storedVal > max) {
           if (!forceRender) {
