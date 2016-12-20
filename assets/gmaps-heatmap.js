@@ -239,9 +239,11 @@
       var latlng = new gmaps.LatLng(entry[latField], entry[lngField]);
       var dataObj = { latlng: latlng };
       dataObj[valueField] = entry[valueField];
-      if (entry.radius) {
-        dataObj.radius = entry.radius;
-      }
+
+      //changed by Will G
+      // if (entry.radius) {
+      //   dataObj.radius = entry.radius;
+      // }
       d.push(dataObj);
     }
     this.data = d;
