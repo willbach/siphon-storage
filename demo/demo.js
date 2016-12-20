@@ -32,8 +32,8 @@ app.get('/temperatures', (req, res) => {
       if(datum.temp && zipData.latitude && zipData.longitude) newData.push( { temp: datum.temp, lat: zipData.latitude, lng: zipData.longitude });
     })
 
-    let interval = 10;
-    let bunch = 200;
+    let interval = 73;
+    let bunch = 187;
     let bunches = Math.ceil(newData.length / bunch);
 
     for(i = 0; i < newData.length; i += bunch) {
