@@ -15,7 +15,7 @@
 </head>
 <body>
 
-  <span>
+  <span style="margin-bottom: 10px">
     <center>
       <h1>USA Temperatures</h1>
       <button id="showTemps">Show temperatures</button>
@@ -32,7 +32,7 @@
       var myLatlng = new google.maps.LatLng(40, -100.10);
       // map options,
       var myOptions = {
-        zoom: 4,
+        zoom: 5,
         center: myLatlng
       };
       // standard map
@@ -41,7 +41,7 @@
       heatmap = new HeatmapOverlay(map, 
         {
           // radius should be small ONLY if scaleRadius is true (or small radius is intended)
-          "radius": 3,
+          "radius": 4,
           "maxOpacity": 1, 
           // scales the radius based on map zoom
           "scaleRadius": false, 
