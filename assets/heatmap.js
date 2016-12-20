@@ -69,13 +69,13 @@ var Store = (function StoreClosure() {
         }
 
         if (!store[x][y]) {
-          store[x][y] = value;
-          radi[x][y] = radius;
+          store[x][y] = 10;
+          radi[x][y] = 1;
         } 
         //modified by Will G
         else {
-          store[x][y] += value;
-          console.log('overlap')
+          // store[x][y] += value;
+          console.log('overlap',store[x][y])
         }
         var storedVal = store[x][y];
 
