@@ -56,11 +56,13 @@
         console.log('connected');
       });
       socket.on('temps', function(newData){
-        var allData = testData.data.concat(newData);
-        for(var i = 0; i < allData.length; i++) {
-          if(allData[i].lat === null || allData[i].lng === null || allData[i].temp === null) console.log('we have a null', i, allData[i]);
+        var allData = testData.data;
+	for(var i = 0; i < newData.length; i++) {
+          if(newData[i]) allData.push(newData[i]);
         }
+        
         var together = Object.assign({}, testData, { data: allData });
+        console.log('new data', together);
         heatmap.setData(together);
 
       });
