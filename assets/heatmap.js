@@ -75,7 +75,6 @@ var Store = (function StoreClosure() {
         //modified by Will G
         else {
           // store[x][y] += value;
-          console.log('overlap',store[x][y])
         }
         var storedVal = store[x][y];
 
