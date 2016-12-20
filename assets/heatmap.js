@@ -70,7 +70,7 @@ var Store = (function StoreClosure() {
 
         if (!store[x][y]) {
           store[x][y] = 10;
-          radi[x][y] = 1;
+          radi[x][y] = radius;
         } 
         //modified by Will G
         else {
