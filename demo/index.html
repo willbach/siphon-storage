@@ -27,39 +27,16 @@
   </div>
   <script>
     $(document).ready( function() {
+      function initMap() {
+        // Create the map.
+        var map = new google.maps.Map(document.getElementById('map-canvas'), {
+          zoom: 4,
+          center: {lat: 40, lng: -100.1},
+          mapTypeId: 'terrain'
+        });
+      }
 
-      // don't forget to add gmaps-heatmap.js
-      var myLatlng = new google.maps.LatLng(40, -100.10);
-      // map options,
-      var myOptions = {
-        zoom: 5,
-        center: myLatlng
-      };
-      // standard map
-      map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
-      // heatmap layer
-      heatmap = new HeatmapOverlay(map, 
-        {
-          // radius should be small ONLY if scaleRadius is true (or small radius is intended)
-          "radius": 4,
-          "maxOpacity": 1, 
-          // scales the radius based on map zoom
-          "scaleRadius": false, 
-          // if set to false the heatmap uses the global maximum for colorization
-          // if activated: uses the data maximum within the current map boundaries 
-          //   (there will always be a red spot with useLocalExtremas true)
-          "useLocalExtrema": true,
-          // which field name in your data represents the latitude - default "lat"
-          latField: 'lat',
-          // which field name in your data represents the longitude - default "lng"
-          lngField: 'lng',
-          // which field name in your data represents the data value - default "value"
-          valueField: 'temp'
-        }
-      );
-
-      var testData = {max: 80, min: -10, data: []};
-
+      var data = [];
 
       $('#showTemps').click (function () {
         $.get({
@@ -77,15 +54,29 @@
         console.log('connected');
       });
       socket.on('temps', function(newData){
-        var allData = testData.data;
 	      for(var i = 0; i < newData.length; i++) {
-          if(newData[i]) allData.push(newData[i]);
+          if(newData[i]) data.push(newData[i]);
         }
-        
-        var together = Object.assign({}, testData, { data: allData });
-        console.log('new data', together.data.length);
-        heatmap.setData(together);
-
+        console.log(data.length)
+        //build up the points if this is the last piece
+        if(newData.length < 900) {
+          console.log('last piece')
+          // Construct the circle for each value in citymap.
+          // Note: We scale the area of the circle based on the population.
+          for (var city in citymap) {
+            // Add the circle for this city to the map.
+            var cityCircle = new google.maps.Circle({
+              strokeColor: '#FF0000',
+              strokeOpacity: 0.8,
+              strokeWeight: 2,
+              fillColor: '#FF0000',
+              fillOpacity: 0.35,
+              map: map,
+              center: citymap[city].center,
+              radius: 10
+            });
+          }
+        }
       });
       socket.on('disconnect', function(){
         console.log('disconnected')
@@ -95,8 +86,8 @@
     })
   </script>
 
-  <script src="/scripts/heatmap.js"></script>
-  <script src="/scripts/gmaps-heatmap.js"></script>
+  <!--<script src="/scripts/heatmap.js"></script>
+  <script src="/scripts/gmaps-heatmap.js"></script>-->
   <script src="scripts/socket.io.min.js"></script>
   
 </body>
