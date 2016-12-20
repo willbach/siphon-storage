@@ -73,9 +73,10 @@ var Store = (function StoreClosure() {
           radi[x][y] = radius;
         } 
         //modified by Will G
-        // else {
-        //   store[x][y] += value;
-        // }
+        else {
+          store[x][y] += value;
+          console.log('overlap')
+        }
         var storedVal = store[x][y];
 
         if (storedVal > max) {
