@@ -31,8 +31,8 @@
       heatmap = new HeatmapOverlay(map, 
         {
           // radius should be small ONLY if scaleRadius is true (or small radius is intended)
-          "radius": 0.2,
-          "maxOpacity": 0.5, 
+          "radius": 1,
+          "maxOpacity": 1, 
           // scales the radius based on map zoom
           "scaleRadius": false, 
           // if set to false the heatmap uses the global maximum for colorization
@@ -62,7 +62,7 @@
         }
         
         var together = Object.assign({}, testData, { data: allData });
-        console.log('new data', together);
+        console.log('new data', together.data.length);
         heatmap.setData(together);
 
       });

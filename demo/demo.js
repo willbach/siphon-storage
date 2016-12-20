@@ -33,7 +33,7 @@ app.get('/temperatures', (req, res) => {
     })
 
     let interval = 10;
-    let bunch = 200;
+    let bunch = 1000;
     let bunches = Math.ceil(newData.length / bunch);
 
     for(i = 0; i < newData.length; i += bunch) {
