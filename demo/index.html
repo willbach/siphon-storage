@@ -69,13 +69,13 @@
               // Add the circle for this city to the map.
               var cityCircle = new google.maps.Circle({
                 strokeColor: '#FF0000',
-                strokeOpacity: 0.8,
+                strokeOpacity: 0.5,
                 strokeWeight: 1,
-                fillColor: '#FFFF00',
-                fillOpacity: 0.2,
+                fillColor: '#FF0000',
+                fillOpacity: 0.5,
                 map: map,
                 center: { lat: datum.lat, lng: datum.lng },
-                radius: 100
+                radius: 1000
               });
             } else {
               console.log('no data')
