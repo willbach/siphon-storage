@@ -7,12 +7,16 @@
   <script
        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFZ17efCedehtFstP6dLziBgeDPnDdyMs&libraries=visualization&callback=initMap">
   </script>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
    
 </head>
 <body>
 
   <span>
-    <button><a href="/temperatures">Show temperatures</a></button>
+    <button id="showTemps">Show temperatures</button>
     <center><h1>USA Temperatures</h1></center>
   </span>
 
@@ -20,7 +24,7 @@
 
   </div>
   <script>
-    window.onload = function() {
+    $(document).ready( function() {
 
       // don't forget to add gmaps-heatmap.js
       var myLatlng = new google.maps.LatLng(40, -100.10);
@@ -54,6 +58,18 @@
 
       var testData = {max: 80, min: -10, data: []};
 
+
+      $('#showTemps').click (function () {
+        $.get({
+          url: '/temperatures',
+          success: function() {
+            console.log('success');
+          },
+          error: function() {
+            console.log('error');
+          }
+        })
+      })
       var socket = io('http://138.68.62.90:3000');
       socket.on('connect', function(){
         console.log('connected');
@@ -74,7 +90,7 @@
       });
 
       heatmap.setData(testData);
-    }
+    })
   </script>
 
   <script src="/scripts/heatmap.js"></script>
