@@ -14,18 +14,19 @@
    
 </head>
 <body>
+  <div id="container" style="width: 1200px">
+    <span style="margin-bottom: 10px">
+      <center>
+        <h1>USA Temperatures</h1>
+        <button id="showTemps">Show temperatures</button>
+      </center>
+    </span>
 
-  <span style="margin-bottom: 10px">
-    <center>
-      <h1>USA Temperatures</h1>
-      <button id="showTemps">Show temperatures</button>
-    </center>
-  </span>
+    <div id="map-canvas" class="heatmap" style="postion: relative; height: 500px; width: 1200px">
+    </div>
 
-  <div id="map-canvas" class="heatmap" style="postion: relative; height: 500px; width: 1000px">
+    <div id="root" style="height: 80px; width: 1200px; position: relative;"/>
   </div>
-
-  <div id="root" style="height: 80px; width: 1200px; position: relative;"/>
 
   <script>
     var map;
