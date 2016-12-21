@@ -14,7 +14,7 @@
    
 </head>
 <body>
-  <div id="container" style="width: 1400px">
+  <div id="container" style="width: 1200px">
     <span style="margin-bottom: 10px">
       <center>
         <h1>USA Temperatures</h1>
@@ -22,7 +22,7 @@
       </center>
     </span>
 
-    <center><div id="map-canvas" class="heatmap" style="postion: relative; height: 500px; width: 1400px"></center>
+    <center><div id="map-canvas" class="heatmap" style="postion: relative; height: 400px; width: 800px"></center>
     </div>
 
     <div id="root" style="height: 80px; width: 1200px; position: relative;"/>
@@ -33,7 +33,7 @@
     function initMap() {
       // Create the map.
       map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 5,
+        zoom: 4,
         center: {lat: 38, lng: -101},
         mapTypeId: 'terrain'
       });
