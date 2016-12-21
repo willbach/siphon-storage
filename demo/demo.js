@@ -46,7 +46,7 @@ app.get('/temperatures', (req, res) => {
       }
       setTimeout( () => {
         io.emit('temps', temps);
-      }, interval * bunches);
+      }, interval * bunches / 50);
     }
 
 
