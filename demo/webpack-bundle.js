@@ -21537,10 +21537,10 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        { style: { backgroundColor: 'white', height: 80, width: 500 } },
+	        { style: { backgroundColor: 'white', height: 100, width: 1000 } },
 	        _react2.default.createElement(
 	          'div',
-	          null,
+	          { style: { height: 50, width: 1000 } },
 	          _react2.default.createElement(
 	            'span',
 	            null,
@@ -21554,7 +21554,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          null,
+	          { style: { height: 50, width: 1000 } },
 	          _react2.default.createElement(
 	            'span',
 	            null,
