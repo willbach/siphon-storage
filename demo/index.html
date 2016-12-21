@@ -70,26 +70,25 @@
       socket.on('connect', function(){console.log('connected')});
       socket.on('temps', function(data){
 
-          for (var i = 0; i < data.length; i+=5) {
-            if(data[i]) {
-              
-              var datum = data[i];
-              var temp = Math.floor(Number(datum.temp) / 10) * 10;
-              if(colors[temp] && !(temp >= 50 && datum.lat > 38 && datum.lng > -120 )) {
-                // Add the circle for this city to the map.
-                var cityCircle = new google.maps.Circle({
-                  strokeColor: colors[temp],
-                  strokeOpacity: 0.2,
-                  strokeWeight: 1,
-                  fillColor: colors[temp],
-                  fillOpacity: 0.2,
-                  map: map,
-                  center: { lat: datum.lat, lng: datum.lng },
-                  radius: 40000
-                });
-              }
+        for (var i = 0; i < data.length; i+=5) {
+          if(data[i]) {
+            
+            var datum = data[i];
+            var temp = Math.floor(Number(datum.temp) / 10) * 10;
+            if(colors[temp] && !(temp >= 50 && datum.lat > 38 && datum.lng > -120 )) {
+              // Add the circle for this city to the map.
+              var cityCircle = new google.maps.Circle({
+                strokeColor: colors[temp],
+                strokeOpacity: 0.2,
+                strokeWeight: 1,
+                fillColor: colors[temp],
+                fillOpacity: 0.2,
+                map: map,
+                center: { lat: datum.lat, lng: datum.lng },
+                radius: 40000
+              });
             }
-          // }
+          }
         }
       });
       socket.on('disconnect', function(){
