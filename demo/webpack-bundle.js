@@ -21542,10 +21542,10 @@
 	        { style: { backgroundColor: 'white', height: 80, width: 1000 } },
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: 30, width: "100%", display: 'inline' } },
+	          { style: { height: 30, width: "1000px", display: 'inline' } },
 	          _react2.default.createElement(
 	            'div',
-	            { style: { width: '11%', display: 'inline' } },
+	            { style: { width: "200px", display: 'inline' } },
 	            'Successful Requests: '
 	          ),
 	          _react2.default.createElement(
@@ -21556,10 +21556,10 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: 30, width: "100%" } },
+	          { style: { height: 30, width: "1000px" } },
 	          _react2.default.createElement(
 	            'span',
-	            { style: { width: '11%' } },
+	            { style: { width: "200px" } },
 	            'Errors: '
 	          ),
 	          _react2.default.createElement(
