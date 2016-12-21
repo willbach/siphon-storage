@@ -21564,7 +21564,7 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { style: { width: "100px", position: "absolute", fontSize: "20px", bottom: "22px" } },
+	            { style: { width: "100px", position: "absolute", fontSize: "20px", bottom: "23px" } },
 	            'Errors: '
 	          )
 	        )
