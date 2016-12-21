@@ -21534,8 +21534,8 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var sucWidth = (this.state.suc / 40).toString() + "px";
-	      var errWidth = (this.state.err / 20).toString() + "px";
+	      var sucWidth = (this.state.suc / 55).toString() + "px";
+	      var errWidth = (this.state.err / 30).toString() + "px";
 
 	      return _react2.default.createElement(
 	        'div',
@@ -21545,12 +21545,12 @@
 	          { style: { height: 30, width: "1000px", flexDirection: 'row', display: 'flex' } },
 	          _react2.default.createElement(
 	            'div',
-	            { style: { width: "200px" } },
+	            { style: { width: "120px", textAlign: 'right' } },
 	            'Successful Requests: '
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { style: { backgroundColor: 'green', color: 'white', width: '800px' } },
+	            { style: { backgroundColor: 'green', color: 'white', width: sucWidth } },
 	            this.state.suc
 	          )
 	        ),
@@ -21559,12 +21559,12 @@
 	          { style: { height: 30, width: "1000px", flexDirection: 'row', display: 'flex' } },
 	          _react2.default.createElement(
 	            'span',
-	            { style: { width: "200px" } },
+	            { style: { width: "120px", textAlign: 'right' } },
 	            'Errors: '
 	          ),
 	          _react2.default.createElement(
 	            'span',
-	            { style: { backgroundColor: 'red', color: 'white', width: "800px" } },
+	            { style: { backgroundColor: 'red', color: 'white', width: errWidth } },
 	            this.state.err
 	          )
 	        )
