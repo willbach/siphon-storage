@@ -21542,7 +21542,7 @@
 	        { style: { backgroundColor: 'white', height: 80, width: "1000px" } },
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: 30, width: "1000px" } },
+	          { style: { height: 30, width: "1000px", flexDirection: 'row', display: 'flex' } },
 	          _react2.default.createElement(
 	            'div',
 	            { style: { width: "200px" } },
@@ -21556,7 +21556,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: 30, width: "1000px" } },
+	          { style: { height: 30, width: "1000px", flexDirection: 'row', display: 'flex' } },
 	          _react2.default.createElement(
 	            'span',
 	            { style: { width: "200px" } },
