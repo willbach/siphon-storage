@@ -21536,7 +21536,6 @@
 	    value: function render() {
 	      var sucWidth = (this.state.suc / 41000).toString() + "%";
 	      var errWidth = (this.state.err / 20000).toString() + "%";
-	      console.log(sucWidth, errWidth);
 
 	      return _react2.default.createElement(
 	        'div',
@@ -21551,7 +21550,7 @@
 	          ),
 	          _react2.default.createElement(
 	            'span',
-	            { style: { backgroundColor: 'green', color: 'white', width: sucWidth } },
+	            { style: { backgroundColor: 'green', color: 'white', width: '1000px' } },
 	            this.state.suc
 	          )
 	        ),
