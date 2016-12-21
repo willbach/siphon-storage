@@ -21537,7 +21537,7 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        { style: { backgroundColor: 'white', height: 80, width: 500 } },
+	        { style: { backgroundColor: 'white', height: '80px', width: '500px' } },
 	        _react2.default.createElement(
 	          'div',
 	          null,
@@ -21548,7 +21548,7 @@
 	          ),
 	          _react2.default.createElement(
 	            'span',
-	            { style: { backgroundColor: 'green', color: 'white', width: this.state.suc / 40 } },
+	            { style: { backgroundColor: 'green', color: 'white', width: (this.state.suc / 40).toString() + 'px' } },
 	            this.state.suc
 	          )
 	        ),
@@ -21558,12 +21558,11 @@
 	          _react2.default.createElement(
 	            'span',
 	            null,
-	            'Errors: ',
-	            this.state.err
+	            'Errors: '
 	          ),
 	          _react2.default.createElement(
 	            'span',
-	            { style: { backgroundColor: 'red', color: 'white', width: this.state.err / 40 } },
+	            { style: { backgroundColor: 'red', color: 'white', width: (this.state.err / 40).toString() + 'px' } },
 	            this.state.err
 	          )
 	        )
