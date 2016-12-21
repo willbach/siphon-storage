@@ -21544,12 +21544,12 @@
 	          'div',
 	          { style: { height: 30, width: "100%", display: 'inline' } },
 	          _react2.default.createElement(
-	            'span',
+	            'div',
 	            { style: { width: '11%', display: 'inline' } },
 	            'Successful Requests: '
 	          ),
 	          _react2.default.createElement(
-	            'span',
+	            'div',
 	            { style: { backgroundColor: 'green', color: 'white', width: '88%', display: 'inline' } },
 	            this.state.suc
 	          )
