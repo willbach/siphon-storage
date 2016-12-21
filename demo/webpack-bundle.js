@@ -21515,7 +21515,8 @@
 
 	    _this.state = {
 	      suc: 0,
-	      err: 0
+	      err: 0,
+	      initial: true
 	    };
 	    return _this;
 	  }
@@ -21525,10 +21526,12 @@
 	    value: function componentWillMount() {
 	      var that = this;
 	      socket.on('requests', function (data) {
-	        console.log('got an update', data);
-	        var suc = Number(that.state.suc) + Number(data.suc);
-	        var err = Number(that.state.err) + Number(data.err);
-	        that.setState({ suc: suc, err: err });
+	        if (that.state.initial) {
+	          console.log('got an update', data);
+	          var suc = Number(that.state.suc) + Number(data.suc);
+	          var err = Number(that.state.err) + Number(data.err);
+	          that.setState({ suc: suc, err: err });
+	        }
 	      });
 	    }
 	  }, {
