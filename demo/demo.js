@@ -23,7 +23,6 @@ app.get('/temperatures', (req, res) => {
   console.log('requesting temps');
   Temperatures.findAll()
   .then( (data) => {
-    console.log('here is the data', data.length);
 
     let newData = [];
     data.forEach( (datum) => {
