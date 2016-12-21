@@ -21551,7 +21551,7 @@
 	          _react2.default.createElement(
 	            'div',
 	            { style: { width: "150px", position: "absolute", fontSize: "20px", bottom: "0px" } },
-	            'Successes: '
+	            'Successes'
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -21565,7 +21565,7 @@
 	          _react2.default.createElement(
 	            'div',
 	            { style: { width: "100px", position: "absolute", fontSize: "20px", bottom: "0px" } },
-	            'Errors: '
+	            'Errors'
 	          )
 	        )
 	      );
