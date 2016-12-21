@@ -21534,7 +21534,7 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var sucHeight = (this.state.suc / 100).toString() + "px";
+	      var sucHeight = (this.state.suc / 120).toString() + "px";
 	      var errHeight = (this.state.err / 20).toString() + "px";
 
 	      return _react2.default.createElement(
