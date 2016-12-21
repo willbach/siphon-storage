@@ -21534,38 +21534,38 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var sucWidth = (this.state.suc / 40).toString() + "px";
-	      var errWidth = (this.state.err / 10).toString() + "px";
+	      var sucHeight = (this.state.suc / 100).toString() + "px";
+	      var errHeight = (this.state.err / 20).toString() + "px";
 
 	      return _react2.default.createElement(
 	        'div',
-	        { style: { backgroundColor: 'white', height: 80, width: "1200px" } },
+	        { style: { backgroundColor: 'white', height: "420px", width: "300px", flexDirection: 'row', display: 'flex' } },
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: 30, width: "1200px", flexDirection: 'row', display: 'flex' } },
+	          { style: { height: "420px", width: "150px", float: "bottom" } },
 	          _react2.default.createElement(
 	            'div',
-	            { style: { width: "150px", textAlign: 'right', marginRight: '10px' } },
-	            'Successful Requests: '
+	            { style: { backgroundColor: 'green', color: 'white', width: "150px", height: sucHeight, float: "bottom" } },
+	            this.state.suc
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { style: { backgroundColor: 'green', color: 'white', width: sucWidth } },
-	            this.state.suc
+	            { style: { width: "150px" } },
+	            'Successful Requests: '
 	          )
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: 30, width: "1200px", flexDirection: 'row', display: 'flex' } },
+	          { style: { height: "420px", width: "150px", float: "bottom" } },
 	          _react2.default.createElement(
-	            'span',
-	            { style: { width: "150px", textAlign: 'right', marginRight: '10px' } },
-	            'Errors: '
+	            'div',
+	            { style: { backgroundColor: 'red', color: 'white', width: "150px", height: errHeight, float: "bottom" } },
+	            this.state.err
 	          ),
 	          _react2.default.createElement(
-	            'span',
-	            { style: { backgroundColor: 'red', color: 'white', width: errWidth } },
-	            this.state.err
+	            'div',
+	            { style: { width: "150px" } },
+	            'Errors: '
 	          )
 	        )
 	      );

@@ -22,10 +22,11 @@
       </center>
     </span>
 
-    <center><div id="map-canvas" class="heatmap" style="postion: relative; height: 420px; width: 800px"></center>
+    <center>
+      <div id="map-canvas" class="heatmap" style="postion: relative; height: 420px; width: 800px">
+      <div id="root" style="height: 420px; width: 300px; margin-left: 30px; margin-right: 30px;"/>
+    </center>
     </div>
-
-    <div id="root" style="height: 80px; width: 1200px; margin-left: auto; margin-right: auto;"/>
   </div>
 
   <script>
@@ -70,14 +71,7 @@
       var socket = io('http://138.68.62.90:3000');
       socket.on('connect', function(){console.log('connected')});
       socket.on('temps', function(data){
-	      // for(var i = 0; i < newData.length; i++) {
-        //   if(newData[i]) data.push(newData[i]);
-        // }
-        //build up the points if this is the last piece
-        // if(newData.length < 243) {
-        //   console.log('last piece')
-          // Construct the circle for each value in citymap.
-          // Note: We scale the area of the circle based on the population.
+
           for (var i = 0; i < data.length; i+=5) {
             if(data[i]) {
               
