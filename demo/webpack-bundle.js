@@ -21534,8 +21534,8 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var sucWidth = (this.state.suc / 40).toString() + "px";
-	      var errWidth = (this.state.err / 40).toString() + "px";
+	      var sucWidth = (this.state.suc / 41000).toString() + "%";
+	      var errWidth = (this.state.err / 20000).toString() + "%";
 	      console.log(sucWidth, errWidth);
 
 	      return _react2.default.createElement(
@@ -21546,7 +21546,7 @@
 	          { style: { height: 30, width: "100%" } },
 	          _react2.default.createElement(
 	            'span',
-	            null,
+	            { style: { width: '11%' } },
 	            'Successful Requests: '
 	          ),
 	          _react2.default.createElement(
@@ -21560,7 +21560,7 @@
 	          { style: { height: 30, width: "100%" } },
 	          _react2.default.createElement(
 	            'span',
-	            null,
+	            { style: { width: '11%' } },
 	            'Errors: '
 	          ),
 	          _react2.default.createElement(
