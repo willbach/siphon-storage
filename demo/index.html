@@ -65,17 +65,15 @@
         })
       })
       var socket = io('http://138.68.62.90:3000');
-      socket.on('connect', function(){
-        console.log('connected');
-      });
-      socket.on('temps', function(newData){
-	      for(var i = 0; i < newData.length; i++) {
-          if(newData[i]) data.push(newData[i]);
-        }
+      socket.on('connect', function(){console.log('connected')});
+      socket.on('temps', function(data){
+	      // for(var i = 0; i < newData.length; i++) {
+        //   if(newData[i]) data.push(newData[i]);
+        // }
         console.log(data.length)
         //build up the points if this is the last piece
-        if(newData.length < 243) {
-          console.log('last piece')
+        // if(newData.length < 243) {
+        //   console.log('last piece')
           // Construct the circle for each value in citymap.
           // Note: We scale the area of the circle based on the population.
           for (var i = 0; i < data.length; i+=10) {
@@ -97,7 +95,7 @@
                 });
               }
             }
-          }
+          // }
         }
       });
       socket.on('disconnect', function(){
@@ -107,8 +105,6 @@
     })
   </script>
 
-  <!--<script src="/scripts/heatmap.js"></script>
-  <script src="/scripts/gmaps-heatmap.js"></script>-->
   <script src="scripts/socket.io.min.js"></script>
   
 </body>
