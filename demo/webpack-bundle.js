@@ -21526,8 +21526,8 @@
 	      var that = this;
 	      socket.on('requests', function (data) {
 	        console.log('got an update', data);
-	        var suc = that.state.suc + data.suc;
-	        var err = that.state.err + data.err;
+	        var suc = Number(that.state.suc) + Number(data.suc);
+	        var err = Number(that.state.err) + Number(data.err);
 	        that.setState({ suc: suc, err: err });
 	      });
 	    }

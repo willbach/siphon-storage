@@ -34,7 +34,7 @@ app.get('/temperatures', (req, res) => {
     
     setTimeout( () => {
       io.emit('temps', newData);
-    });
+    }, 5000);
 
   })
   
