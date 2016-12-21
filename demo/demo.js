@@ -31,26 +31,19 @@ app.get('/temperatures', (req, res) => {
       if(zipData === undefined) return {};
       if(datum.temp && zipData.latitude && zipData.longitude) newData.push( { temp: datum.temp, lat: zipData.latitude, lng: zipData.longitude });
     })
-
-    // let interval = 83;
-    // let bunch = 243;
-    // let bunches = Math.ceil(newData.length / bunch);
-
-    // for(i = 0; i < newData.length; i += bunch) {
-    //   let temps = [];
-    //   for(j = 0; j < bunch && data[i+j]; j++) {
-    //     temps.push(newData[i+j]);
-    //   }
-    //   console.log('bunch of temps for ya', temps.length);
-    //   setTimeout( () => {
-    //     io.emit('temps', temps);
-    //   }, interval * bunches);
-    // }
+    
     setTimeout( () => {
       io.emit('temps', newData);
-    })
+    });
 
   })
+  
+  for(let i = 0; i < 41268; i += Math.random() * 100) {
+    setTimeout( () => {
+      io.emit('requests', { success: Math.ceil(Math.random() * 95), failure: Math.ceil(Math.random() * 5) });
+    }, 13)
+  }
+
   res.end();
 
 });
@@ -64,3 +57,22 @@ io.on('connection', (client) => {
 });
 
 server.listen(3000, () => console.log(`listening on port ${PORT}`));
+
+
+
+
+
+// let interval = 83;
+    // let bunch = 243;
+    // let bunches = Math.ceil(newData.length / bunch);
+
+    // for(i = 0; i < newData.length; i += bunch) {
+    //   let temps = [];
+    //   for(j = 0; j < bunch && data[i+j]; j++) {
+    //     temps.push(newData[i+j]);
+    //   }
+    //   console.log('bunch of temps for ya', temps.length);
+    //   setTimeout( () => {
+    //     io.emit('temps', temps);
+    //   }, interval * bunches);
+    // }

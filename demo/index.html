@@ -70,7 +70,6 @@
 	      // for(var i = 0; i < newData.length; i++) {
         //   if(newData[i]) data.push(newData[i]);
         // }
-        console.log(data.length)
         //build up the points if this is the last piece
         // if(newData.length < 243) {
         //   console.log('last piece')
@@ -98,6 +97,12 @@
           // }
         }
       });
+      var suc = 0, err = 0;
+      socket.on('requests', function(data) {
+        suc += data.success;
+        err += data.failure;
+        console.log('success', suc, 'errors', err)
+      })
       socket.on('disconnect', function(){
         console.log('disconnected')
       });
