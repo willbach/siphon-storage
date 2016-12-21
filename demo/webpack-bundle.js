@@ -21542,29 +21542,29 @@
 	        { style: { backgroundColor: 'white', height: "420px", width: "250px", flexDirection: 'row', display: 'flex' } },
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: "420px", width: "150px", float: "bottom" } },
+	          { style: { height: "420px", width: "150px", position: "relative" } },
 	          _react2.default.createElement(
 	            'div',
-	            { style: { backgroundColor: 'green', color: 'white', width: "50px", height: sucHeight, float: "bottom" } },
+	            { style: { backgroundColor: 'green', color: 'white', width: "50px", height: sucHeight, position: "absolute", bottom: "20px" } },
 	            this.state.suc
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { style: { width: "150px", float: "bottom" } },
+	            { style: { width: "150px", position: "absolute", bottom: "0px" } },
 	            'Successful Requests: '
 	          )
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: "420px", width: "100px", float: "bottom" } },
+	          { style: { height: "420px", width: "100px", position: "relative" } },
 	          _react2.default.createElement(
 	            'div',
-	            { style: { backgroundColor: 'red', color: 'white', width: "50px", height: errHeight, float: "bottom" } },
+	            { style: { backgroundColor: 'red', color: 'white', width: "50px", height: errHeight, position: "absolute", bottom: "20px" } },
 	            this.state.err
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { style: { width: "100px", float: "bottom" } },
+	            { style: { width: "100px", position: "absolute", bottom: "0px" } },
 	            'Errors: '
 	          )
 	        )
