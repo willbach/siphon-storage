@@ -21545,7 +21545,7 @@
 	          { style: { height: 30, width: "1000px", flexDirection: 'row', display: 'flex' } },
 	          _react2.default.createElement(
 	            'div',
-	            { style: { width: "120px", textAlign: 'right' } },
+	            { style: { width: "130px", textAlign: 'right' } },
 	            'Successful Requests: '
 	          ),
 	          _react2.default.createElement(
@@ -21559,7 +21559,7 @@
 	          { style: { height: 30, width: "1000px", flexDirection: 'row', display: 'flex' } },
 	          _react2.default.createElement(
 	            'span',
-	            { style: { width: "120px", textAlign: 'right' } },
+	            { style: { width: "130px", textAlign: 'right' } },
 	            'Errors: '
 	          ),
 	          _react2.default.createElement(
