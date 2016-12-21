@@ -21537,7 +21537,7 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        { style: 'margin-top: 100px; background-color: white; height: 100px; width: 500px' },
+	        { style: { marginTop: 100, backgroundColor: white, height: 100, width: 500 } },
 	        _react2.default.createElement(
 	          'div',
 	          null,
