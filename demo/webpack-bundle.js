@@ -21528,7 +21528,7 @@
 	        console.log('got an update', data);
 	        var suc = that.state.suc + data.suc;
 	        var err = that.state.err + data.err;
-	        that.setState({}, { suc: suc, err: err });
+	        that.setState({ suc: suc, err: err });
 	      });
 	    }
 	  }, {
