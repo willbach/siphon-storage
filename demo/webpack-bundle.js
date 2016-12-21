@@ -21537,18 +21537,35 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        { style: { backgroundColor: 'white', height: 100, width: 500 } },
+	        { style: { backgroundColor: 'white', height: 80, width: 500 } },
 	        _react2.default.createElement(
 	          'div',
 	          null,
-	          'Successful Requests: ',
-	          this.state.suc
+	          _react2.default.createElement(
+	            'span',
+	            null,
+	            'Successful Requests: '
+	          ),
+	          _react2.default.createElement(
+	            'span',
+	            { style: { backgroundColor: 'green', color: 'white', width: this.state.suc / 40 } },
+	            this.state.suc
+	          )
 	        ),
 	        _react2.default.createElement(
 	          'div',
 	          null,
-	          'Errors: ',
-	          this.state.err
+	          _react2.default.createElement(
+	            'span',
+	            null,
+	            'Errors: ',
+	            this.state.err
+	          ),
+	          _react2.default.createElement(
+	            'span',
+	            { style: { backgroundColor: 'red', color: 'white', width: this.state.err / 40 } },
+	            this.state.err
+	          )
 	        )
 	      );
 	    }
