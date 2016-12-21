@@ -21534,23 +21534,23 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var sucWidth = (this.state.suc / 41000).toString() + "%";
-	      var errWidth = (this.state.err / 20000).toString() + "%";
+	      var sucWidth = (this.state.suc / 40).toString() + "px";
+	      var errWidth = (this.state.err / 20).toString() + "px";
 
 	      return _react2.default.createElement(
 	        'div',
 	        { style: { backgroundColor: 'white', height: 80, width: "1000px" } },
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: 30, width: "1000px", display: 'inline' } },
+	          { style: { height: 30, width: "1000px" } },
 	          _react2.default.createElement(
 	            'div',
-	            { style: { width: "200px", display: 'inline' } },
+	            { style: { width: "200px" } },
 	            'Successful Requests: '
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { style: { backgroundColor: 'green', color: 'white', width: '800px', display: 'inline' } },
+	            { style: { backgroundColor: 'green', color: 'white', width: '800px' } },
 	            this.state.suc
 	          )
 	        ),
