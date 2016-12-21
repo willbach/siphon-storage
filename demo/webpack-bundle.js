@@ -21545,13 +21545,13 @@
 	          { style: { height: "420px", width: "150px", position: "relative" } },
 	          _react2.default.createElement(
 	            'div',
-	            { style: { backgroundColor: 'green', color: 'white', fontSize: "20px", width: "50px", marginLeft: "50px", height: sucHeight, position: "absolute", bottom: "50px" } },
+	            { style: { backgroundColor: 'green', color: 'white', fontSize: "20px", width: "50px", marginLeft: "50px", height: sucHeight, position: "absolute", bottom: "25px" } },
 	            this.state.suc
 	          ),
 	          _react2.default.createElement(
 	            'div',
 	            { style: { width: "150px", position: "absolute", fontSize: "20px", bottom: "0px" } },
-	            'Successful Requests: '
+	            'Successes: '
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -21559,12 +21559,12 @@
 	          { style: { height: "420px", width: "100px", position: "relative" } },
 	          _react2.default.createElement(
 	            'div',
-	            { style: { backgroundColor: 'red', color: 'white', width: "50px", fontSize: "20px", marginLeft: "20px", height: errHeight, position: "absolute", bottom: "50px" } },
+	            { style: { backgroundColor: 'red', color: 'white', width: "50px", fontSize: "20px", marginLeft: "20px", height: errHeight, position: "absolute", bottom: "25px" } },
 	            this.state.err
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { style: { width: "100px", position: "absolute", fontSize: "20px", bottom: "23px" } },
+	            { style: { width: "100px", position: "absolute", fontSize: "20px", bottom: "0px" } },
 	            'Errors: '
 	          )
 	        )
