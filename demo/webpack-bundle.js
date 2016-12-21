@@ -21542,10 +21542,10 @@
 	        { style: { backgroundColor: 'white', height: "420px", width: "300px", flexDirection: 'row', display: 'flex' } },
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: "420px", width: "150px", float: "bottom" } },
+	          { style: { height: "420px", width: "150px" } },
 	          _react2.default.createElement(
 	            'div',
-	            { style: { backgroundColor: 'green', color: 'white', width: "150px", height: sucHeight, float: "bottom" } },
+	            { style: { backgroundColor: 'green', color: 'white', width: "150px", height: sucHeight } },
 	            this.state.suc
 	          ),
 	          _react2.default.createElement(
@@ -21556,10 +21556,10 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: "420px", width: "150px", float: "bottom" } },
+	          { style: { height: "420px", width: "150px" } },
 	          _react2.default.createElement(
 	            'div',
-	            { style: { backgroundColor: 'red', color: 'white', width: "150px", height: errHeight, float: "bottom" } },
+	            { style: { backgroundColor: 'red', color: 'white', width: "150px", height: errHeight } },
 	            this.state.err
 	          ),
 	          _react2.default.createElement(
