@@ -21541,7 +21541,7 @@
 	        'div',
 	        { style: { backgroundColor: 'white', height: "420px", width: "250px", flexDirection: 'row', display: 'flex' } },
 	        _react2.default.createElement(
-	          'div',
+	          'center',
 	          { style: { height: "420px", width: "150px", position: "relative" } },
 	          _react2.default.createElement(
 	            'div',
@@ -21555,7 +21555,7 @@
 	          )
 	        ),
 	        _react2.default.createElement(
-	          'div',
+	          'center',
 	          { style: { height: "420px", width: "100px", position: "relative" } },
 	          _react2.default.createElement(
 	            'div',
