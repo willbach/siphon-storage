@@ -21542,15 +21542,15 @@
 	        { style: { backgroundColor: 'white', height: 80, width: 1000 } },
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: 30, width: "100%" } },
+	          { style: { height: 30, width: "100%", display: 'inline' } },
 	          _react2.default.createElement(
 	            'span',
-	            { style: { width: '11%' } },
+	            { style: { width: '11%', display: 'inline' } },
 	            'Successful Requests: '
 	          ),
 	          _react2.default.createElement(
 	            'span',
-	            { style: { backgroundColor: 'green', color: 'white', width: '1000px' } },
+	            { style: { backgroundColor: 'green', color: 'white', width: '88%', display: 'inline' } },
 	            this.state.suc
 	          )
 	        ),
