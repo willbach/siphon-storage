@@ -21545,7 +21545,7 @@
 	          { style: { height: "420px", width: "150px", position: "relative" } },
 	          _react2.default.createElement(
 	            'div',
-	            { style: { backgroundColor: 'green', color: 'white', fontSize: "20px", width: "50px", marginLeft: "50px", height: sucHeight, position: "absolute", bottom: "20px" } },
+	            { style: { backgroundColor: 'green', color: 'white', fontSize: "20px", width: "50px", marginLeft: "50px", height: sucHeight, position: "absolute", bottom: "45px" } },
 	            this.state.suc
 	          ),
 	          _react2.default.createElement(
@@ -21559,7 +21559,7 @@
 	          { style: { height: "420px", width: "100px", position: "relative" } },
 	          _react2.default.createElement(
 	            'div',
-	            { style: { backgroundColor: 'red', color: 'white', width: "50px", fontSize: "20px", marginLeft: "25px", height: errHeight, position: "absolute", bottom: "20px" } },
+	            { style: { backgroundColor: 'red', color: 'white', width: "50px", fontSize: "20px", marginLeft: "25px", height: errHeight, position: "absolute", bottom: "45px" } },
 	            this.state.err
 	          ),
 	          _react2.default.createElement(
