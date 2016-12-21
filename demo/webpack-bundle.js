@@ -21539,10 +21539,10 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        { style: { backgroundColor: 'white', height: 80, width: "1000px" } },
+	        { style: { backgroundColor: 'white', height: 80, width: "1200px" } },
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: 30, width: "1000px", flexDirection: 'row', display: 'flex' } },
+	          { style: { height: 30, width: "1200px", flexDirection: 'row', display: 'flex' } },
 	          _react2.default.createElement(
 	            'div',
 	            { style: { width: "150px", textAlign: 'right', marginRight: '10px' } },
@@ -21556,7 +21556,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: 30, width: "1000px", flexDirection: 'row', display: 'flex' } },
+	          { style: { height: 30, width: "1200px", flexDirection: 'row', display: 'flex' } },
 	          _react2.default.createElement(
 	            'span',
 	            { style: { width: "150px", textAlign: 'right', marginRight: '10px' } },

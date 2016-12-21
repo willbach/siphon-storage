@@ -4,7 +4,6 @@ const Temperatures = require('./tempModel');
 module.exports = {
   stackOverflow: function(req, res) {
 
-    //delete the url property
     const queries = req.body.data.map( (piece) => {
       if(piece.data.post) return Stacks.upsert(piece.data);
     });
