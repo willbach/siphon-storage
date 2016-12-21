@@ -21559,7 +21559,7 @@
 	          { style: { height: "420px", width: "100px", position: "relative" } },
 	          _react2.default.createElement(
 	            'div',
-	            { style: { backgroundColor: 'red', color: 'white', width: "50px", fontSize: "20px", marginLeft: "22px", height: errHeight, position: "absolute", bottom: "50px" } },
+	            { style: { backgroundColor: 'red', color: 'white', width: "50px", fontSize: "20px", marginLeft: "20px", height: errHeight, position: "absolute", bottom: "50px" } },
 	            this.state.err
 	          ),
 	          _react2.default.createElement(
