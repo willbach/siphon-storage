@@ -21534,7 +21534,7 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var sucWidth = (this.state.suc / 50).toString() + "px";
+	      var sucWidth = (this.state.suc / 40).toString() + "px";
 	      var errWidth = (this.state.err / 10).toString() + "px";
 
 	      return _react2.default.createElement(
