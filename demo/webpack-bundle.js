@@ -21534,8 +21534,8 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var sucWidth = (this.state.suc / 55).toString() + "px";
-	      var errWidth = (this.state.err / 30).toString() + "px";
+	      var sucWidth = (this.state.suc / 50).toString() + "px";
+	      var errWidth = (this.state.err / 25).toString() + "px";
 
 	      return _react2.default.createElement(
 	        'div',
@@ -21545,7 +21545,7 @@
 	          { style: { height: 30, width: "1000px", flexDirection: 'row', display: 'flex' } },
 	          _react2.default.createElement(
 	            'div',
-	            { style: { width: "150px", textAlign: 'right' } },
+	            { style: { width: "150px", textAlign: 'right', marginRight: '10px' } },
 	            'Successful Requests: '
 	          ),
 	          _react2.default.createElement(
@@ -21559,7 +21559,7 @@
 	          { style: { height: 30, width: "1000px", flexDirection: 'row', display: 'flex' } },
 	          _react2.default.createElement(
 	            'span',
-	            { style: { width: "150px", textAlign: 'right' } },
+	            { style: { width: "150px", textAlign: 'right', marginRight: '10px' } },
 	            'Errors: '
 	          ),
 	          _react2.default.createElement(
