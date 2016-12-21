@@ -21537,15 +21537,15 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { style: 'margin-top: 100px; background-color: white; height: 100px; width: 500px' },
 	        _react2.default.createElement(
-	          'span',
+	          'div',
 	          null,
 	          'Successful Requests: ',
 	          this.state.suc
 	        ),
 	        _react2.default.createElement(
-	          'span',
+	          'div',
 	          null,
 	          'Errors: ',
 	          this.state.err
