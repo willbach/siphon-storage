@@ -21526,28 +21526,29 @@
 	      var that = this;
 	      socket.on('requests', function (data) {
 	        console.log('got an update', data);
-	        that.setState({}, data);
+	        var suc = that.state.suc + data.suc;
+	        var err = that.state.err + data.err;
+	        that.setState({}, { suc: suc, err: err });
 	      });
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var squares = [];
-	      for (var i = 0; i < 64; i++) {
-	        squares.push(_react2.default.createElement(Square, { id: i, key: i, pieces: this.state.pieces, highlight: this.handleClick }));
-	      }
+
 	      return _react2.default.createElement(
 	        'div',
 	        null,
 	        _react2.default.createElement(
-	          'h1',
+	          'span',
 	          null,
-	          'Checkers game'
+	          'Successful Requests: ',
+	          this.state.suc
 	        ),
 	        _react2.default.createElement(
-	          'div',
-	          { id: 'board' },
-	          squares
+	          'span',
+	          null,
+	          'Errors: ',
+	          this.state.err
 	        )
 	      );
 	    }
