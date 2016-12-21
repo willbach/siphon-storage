@@ -21539,13 +21539,13 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        { style: { backgroundColor: 'white', height: "420px", width: "300px", flexDirection: 'row', display: 'flex' } },
+	        { style: { backgroundColor: 'white', height: "420px", width: "250px", flexDirection: 'row', display: 'flex' } },
 	        _react2.default.createElement(
 	          'div',
 	          { style: { height: "420px", width: "150px" } },
 	          _react2.default.createElement(
 	            'div',
-	            { style: { backgroundColor: 'green', color: 'white', width: "150px", height: sucHeight } },
+	            { style: { backgroundColor: 'green', color: 'white', width: "100px", height: sucHeight } },
 	            this.state.suc
 	          ),
 	          _react2.default.createElement(
@@ -21556,15 +21556,15 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: "420px", width: "150px" } },
+	          { style: { height: "420px", width: "100px" } },
 	          _react2.default.createElement(
 	            'div',
-	            { style: { backgroundColor: 'red', color: 'white', width: "150px", height: errHeight } },
+	            { style: { backgroundColor: 'red', color: 'white', width: "100px", height: errHeight } },
 	            this.state.err
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { style: { width: "150px" } },
+	            { style: { width: "100px" } },
 	            'Errors: '
 	          )
 	        )
