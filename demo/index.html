@@ -76,7 +76,7 @@
         //   console.log('last piece')
           // Construct the circle for each value in citymap.
           // Note: We scale the area of the circle based on the population.
-          for (var i = 0; i < data.length; i+=10) {
+          for (var i = 0; i < data.length; i+=5) {
             if(data[i]) {
               
               var datum = data[i];
@@ -91,7 +91,7 @@
                   fillOpacity: 0.2,
                   map: map,
                   center: { lat: datum.lat, lng: datum.lng },
-                  radius: 50000
+                  radius: 40000
                 });
               }
             }
