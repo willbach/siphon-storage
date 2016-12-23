@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>SiphonJS Demonstration - USA Temperatures</title>
-
+  <link rel="stylesheet" href="style.css" media="screen" title="no title">
   <script async defer
        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFZ17efCedehtFstP6dLziBgeDPnDdyMs&libraries=visualization&callback=initMap">
   </script>
@@ -11,9 +11,28 @@
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
-   
+
 </head>
 <body>
+  <div class="nav-bar">
+    <ul>
+      <li><a href="#home"><b>Siphon.js</b></a></li>
+      <li><a href="#news">About</a></li>
+      <li><a class="active" href="#contact">Demo</a></li>
+      <li><a href="#about">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="">
+    <h3>DEMO</h3>
+    <p>
+      Get all temperates of all zipcode in U.S.
+    </p>
+    <p>
+      every 30 seconds
+    </p>
+  </div>
+
   <div id="container" style="width: 100%; margin-top: 50px">
 
     <center>
@@ -22,7 +41,7 @@
           <button id="showTemps" style="font-size: 22px">Get Temperatures</button>
         </center>
         <div id="root"></div>
-      </div> 
+      </div>
       <div id="map-canvas" class="heatmap" style="postion: relative; height: 450px; width: 800px; float: left;"></div>
     </center>
   </div>
@@ -101,7 +120,6 @@
   </script>
   <script src="webpack-bundle.js"></script>
   <script src="scripts/socket.io.min.js"></script>
-  
+
 </body>
 </html>
-
