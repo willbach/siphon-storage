@@ -21553,7 +21553,7 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { style: { width: "150px", position: "absolute", fontSize: "20px", bottom: "0px", color: 'white', backgroundColor: '#b20000', padding: '5px 0px' } },
+	            { style: { width: "150px", position: "absolute", fontSize: "20px", bottom: "0px", color: 'white', backgroundColor: '#b20000', padding: '5px 0px', border: '2px solid black', borderRightWidth: '0px' } },
 	            'Successes'
 	          )
 	        ),
@@ -21567,7 +21567,7 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { style: { width: "100px", position: "absolute", fontSize: "20px", bottom: "0px", color: 'white', backgroundColor: '#b20000', padding: '5px 0px' } },
+	            { style: { width: "100px", position: "absolute", fontSize: "20px", bottom: "0px", color: 'white', backgroundColor: '#b20000', padding: '5px 0px', border: '2px solid black', borderLeftWidth: '0px' } },
 	            'Errors'
 	          )
 	        )
