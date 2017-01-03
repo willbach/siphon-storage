@@ -21542,7 +21542,7 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        { style: { backgroundColor: 'white', height: "420px", width: "250px", flexDirection: 'row', display: 'flex' } },
+	        { style: { height: "420px", width: "250px", flexDirection: 'row', display: 'flex' } },
 	        _react2.default.createElement(
 	          'div',
 	          { style: { height: "436px", width: "150px", position: "relative" } },
