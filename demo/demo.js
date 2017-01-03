@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
-// const zipcodes = require('zipcodes');
-// const dataController = require('../dataController');
-// const Temperatures = require('../tempModel');
+const zipcodes = require('zipcodes');
+const dataController = require('../dataController');
+const Temperatures = require('../tempModel');
 
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
