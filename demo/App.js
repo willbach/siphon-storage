@@ -32,12 +32,12 @@ class App extends React.Component {
     return (
       <div style={{backgroundColor: 'white', height: "420px", width: "250px", flexDirection: 'row', display: 'flex'}}>
 
-        <div style={{height:"440px", width: "150px", position: "relative"}}>
+        <div style={{height:"436px", width: "150px", position: "relative"}}>
           <div style={{backgroundColor: 'green', color: 'white', fontSize: "20px", width: "60px", marginLeft: "45px", height: sucHeight, position: "absolute", bottom: "25px"}}>{this.state.suc}</div>
           <div style={{width: "150px", position: "absolute", fontSize: "20px", bottom: "0px", color: 'white', backgroundColor: '#7f0000', padding: '2 0'}}>Successes</div>
         </div>
 
-        <div style={{height:"440px", width: "100px", position: "relative"}}>
+        <div style={{height:"436px", width: "100px", position: "relative"}}>
           <div style={{backgroundColor: 'red', color: 'white', width: "60px", fontSize: "20px", marginLeft: "20px", height: errHeight, position: "absolute", bottom: "25px"}}>{this.state.err}</div>
           <div style={{width: "100px", position: "absolute", fontSize: "20px", bottom: "0px", color: 'white', backgroundColor: '#7f0000', padding: '2 0'}}>Errors</div>
         </div>
