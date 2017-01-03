@@ -21545,7 +21545,7 @@
 	        { style: { backgroundColor: 'white', height: "420px", width: "250px", flexDirection: 'row', display: 'flex' } },
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: "480px", width: "150px", position: "relative" } },
+	          { style: { height: "440px", width: "150px", position: "relative" } },
 	          _react2.default.createElement(
 	            'div',
 	            { style: { backgroundColor: 'green', color: 'white', fontSize: "20px", width: "60px", marginLeft: "45px", height: sucHeight, position: "absolute", bottom: "25px" } },
@@ -21559,7 +21559,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: "480px", width: "100px", position: "relative" } },
+	          { style: { height: "440px", width: "100px", position: "relative" } },
 	          _react2.default.createElement(
 	            'div',
 	            { style: { backgroundColor: 'red', color: 'white', width: "60px", fontSize: "20px", marginLeft: "20px", height: errHeight, position: "absolute", bottom: "25px" } },
