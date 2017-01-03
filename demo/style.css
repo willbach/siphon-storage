@@ -5,9 +5,10 @@ html,body {
 }
 
 .nav-bar {
+	display: flex;
 	/*flex-grow: 2;*/
 	/*position: fixed;*/
-	margin: 0px;
+	margin-top: -20px;
 	padding: 0px;
 	/*overflow: hidden;*/
 	font-size: 20px;
