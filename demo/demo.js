@@ -15,45 +15,45 @@ app.use(express.static(path.join(__dirname)));
 app.use('/scripts', express.static(__dirname + '/../assets/'));
 app.use(bodyParser.json(), bodyParser.urlencoded({extended: true}));
 
-// app.post('/stackoverflow', dataController.stackOverflow);
-//
-// app.post('/temperatures', dataController.temperatures);
-//
-// app.get('/temperatures', (req, res) => {
-//   console.log('requesting temps');
-//   Temperatures.findAll()
-//   .then( (data) => {
-//
-//     let newData = [];
-//     data.forEach( (datum) => {
-//       let zipData = zipcodes.lookup(datum.zip);
-//       if(zipData === undefined) return {};
-//       if(datum.temp && zipData.latitude && zipData.longitude) newData.push( { temp: datum.temp, lat: zipData.latitude, lng: zipData.longitude });
-//     })
-//
-//     setTimeout( () => {
-//       io.emit('temps', newData);
-//     }, 5000);
-//
-//   })
-//
-//   for(let i = 0, counter = 100; i < 41268; i += Math.random() * 100, counter ++) {
-//     setTimeout( () => {
-//       io.emit('requests', { suc: Math.ceil(Math.random() * 98), err: Math.floor(Math.random() * 2) });
-//     }, 13 * counter)
-//   }
-//
-//   res.end();
-//
-// });
-//
-// io.on('connection', (client) => {
-//   console.log('client connected');
-//
-//   client.on('disconnect', () => {
-//     console.log('client disconnected');
-//   });
-// });
+app.post('/stackoverflow', dataController.stackOverflow);
+
+app.post('/temperatures', dataController.temperatures);
+
+app.get('/temperatures', (req, res) => {
+  console.log('requesting temps');
+  Temperatures.findAll()
+  .then( (data) => {
+
+    let newData = [];
+    data.forEach( (datum) => {
+      let zipData = zipcodes.lookup(datum.zip);
+      if(zipData === undefined) return {};
+      if(datum.temp && zipData.latitude && zipData.longitude) newData.push( { temp: datum.temp, lat: zipData.latitude, lng: zipData.longitude });
+    })
+
+    setTimeout( () => {
+      io.emit('temps', newData);
+    }, 5000);
+
+  })
+
+  for(let i = 0, counter = 100; i < 41268; i += Math.random() * 100, counter ++) {
+    setTimeout( () => {
+      io.emit('requests', { suc: Math.ceil(Math.random() * 98), err: Math.floor(Math.random() * 2) });
+    }, 13 * counter)
+  }
+
+  res.end();
+
+});
+
+io.on('connection', (client) => {
+  console.log('client connected');
+
+  client.on('disconnect', () => {
+    console.log('client disconnected');
+  });
+});
 
 server.listen(3000, () => console.log(`listening on port ${PORT}`));
 
