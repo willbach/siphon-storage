@@ -17,7 +17,7 @@ class App extends React.Component {
     var that = this;
     socket.on('requests', (data) => {
       if(that.state.initial) {
-        console.log('got an update', data);
+        // console.log('got an update', data);
         var suc = Number(that.state.suc) + Number(data.suc);
         var err = Number(that.state.err) + Number(data.err);
         that.setState({suc: suc, err: err});
