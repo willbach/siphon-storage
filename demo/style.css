@@ -58,7 +58,7 @@ p {
 
 button {
 	background-color:#b20000;
-	border: none;
+	border: 2px solid black;
 	color: white;
 	padding: 10px 22px;
 	text-align: center;
