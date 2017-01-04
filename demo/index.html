@@ -86,7 +86,7 @@
               var datum = data[i];
               var temp = Math.floor(Number(datum.temp) / 10) * 10;
               if(colors[temp] && !(temp >= 50 && datum.lat > 38 && datum.lng > -120 )) {
-                var radius = (datum.lat > 37 && datum.lng < -108 && datum.lng > -118) ? 80000: 40000
+                var radius = (datum.lat > 37 && datum.lng < -100 && datum.lng > -120) || (datum.lng < -101 && datum.lng > -116) ? 80000: 40000;
 
                 // Add the circle for this city to the map.
                 var cityCircle = new google.maps.Circle({
