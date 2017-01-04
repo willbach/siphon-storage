@@ -21542,10 +21542,10 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        { style: { height: "436px", width: "250px", flexDirection: 'row', display: 'flex' } },
+	        { style: { height: "436px", width: "210px", flexDirection: 'row', display: 'flex' } },
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: "436px", width: "150px", position: "relative" } },
+	          { style: { height: "436px", width: "120px", position: "relative" } },
 	          _react2.default.createElement(
 	            'div',
 	            { style: { backgroundColor: 'green', color: 'white', fontSize: "20px", width: "60px", marginLeft: "50px", height: sucHeight, position: "absolute", bottom: "38px" } },
@@ -21553,13 +21553,13 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { style: { width: "150px", position: "absolute", fontSize: "20px", bottom: "0px", color: 'white', backgroundColor: '#b20000', padding: '5px 0px', border: '2px solid black', borderRightWidth: '0px' } },
+	            { style: { width: "120px", position: "absolute", fontSize: "20px", bottom: "0px", color: 'white', backgroundColor: '#b20000', padding: '5px 0px', border: '2px solid black', borderRightWidth: '0px' } },
 	            'Successes'
 	          )
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: "436px", width: "100px", position: "relative" } },
+	          { style: { height: "436px", width: "90px", position: "relative" } },
 	          _react2.default.createElement(
 	            'div',
 	            { style: { backgroundColor: 'red', color: 'white', width: "60px", fontSize: "20px", marginLeft: "20px", height: errHeight, position: "absolute", bottom: "38px" } },
@@ -21567,7 +21567,7 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { style: { width: "100px", position: "absolute", fontSize: "20px", bottom: "0px", color: 'white', backgroundColor: '#b20000', padding: '5px 0px', border: '2px solid black', borderLeftWidth: '0px' } },
+	            { style: { width: "90px", position: "absolute", fontSize: "20px", bottom: "0px", color: 'white', backgroundColor: '#b20000', padding: '5px 0px', border: '2px solid black', borderLeftWidth: '0px' } },
 	            'Errors'
 	          )
 	        )
