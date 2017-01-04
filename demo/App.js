@@ -30,7 +30,7 @@ class App extends React.Component {
     let errHeight = (this.state.err/20).toString()+"px";
 
     return (
-      <div style={{height: "434px", width: "20%", flexDirection: 'row', display: 'flex'}}>
+      <div style={{height: "434px", width: "250px", flexDirection: 'row', display: 'flex'}}>
 
         <div style={{height:"434px", width: "150px", position: "relative"}}>
           <div style={{backgroundColor: 'green', color: 'white', fontSize: "20px", width: "60px", marginLeft: "3.66%", height: sucHeight, position: "absolute", bottom: "38px"}}>{this.state.suc}</div>
