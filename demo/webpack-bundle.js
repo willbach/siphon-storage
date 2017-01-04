@@ -21545,29 +21545,29 @@
 	        { style: { height: "31.8%", width: "18.32%", flexDirection: 'row', display: 'flex' } },
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: "31.8%", width: "11%", position: "relative" } },
+	          { style: { height: "31.8%", width: "150px", position: "relative" } },
 	          _react2.default.createElement(
 	            'div',
-	            { style: { backgroundColor: 'green', color: 'white', fontSize: "20px", width: "4.4%", marginLeft: "3.66%", height: sucHeight, bottom: "38px" } },
+	            { style: { backgroundColor: 'green', color: 'white', fontSize: "20px", width: "4.4%", marginLeft: "3.66%", height: sucHeight, position: "absolute", bottom: "38px" } },
 	            this.state.suc
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { style: { width: "11%", fontSize: "20px", bottom: "0px", color: 'white', backgroundColor: '#b20000', padding: '5px 0px', border: '2px solid black', borderRightWidth: '0px' } },
+	            { style: { width: "11%", position: "absolute", fontSize: "20px", bottom: "0px", color: 'white', backgroundColor: '#b20000', padding: '5px 0px', border: '2px solid black', borderRightWidth: '0px' } },
 	            'Successes'
 	          )
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: "31.8%", width: "7.32%", position: "relative" } },
+	          { style: { height: "31.8%", width: "100px", position: "relative" } },
 	          _react2.default.createElement(
 	            'div',
-	            { style: { backgroundColor: 'red', color: 'white', width: "4.4%", fontSize: "20px", marginLeft: "1.46%", height: errHeight, bottom: "38px" } },
+	            { style: { backgroundColor: 'red', color: 'white', width: "4.4%", fontSize: "20px", marginLeft: "1.46%", height: errHeight, position: "absolute", bottom: "38px" } },
 	            this.state.err
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { style: { width: "7.32%", fontSize: "20px", bottom: "0px", color: 'white', backgroundColor: '#b20000', padding: '5px 0px', border: '2px solid black', borderLeftWidth: '0px' } },
+	            { style: { width: "7.32%", position: "absolute", fontSize: "20px", bottom: "0px", color: 'white', backgroundColor: '#b20000', padding: '5px 0px', border: '2px solid black', borderLeftWidth: '0px' } },
 	            'Errors'
 	          )
 	        )
