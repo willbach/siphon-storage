@@ -21542,10 +21542,10 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        { style: { height: "434px", width: "18.32%", flexDirection: 'row', display: 'flex' } },
+	        { style: { height: "56.5%", width: "18.32%", flexDirection: 'row', display: 'flex' } },
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: "434px", width: "11%", position: "relative" } },
+	          { style: { height: "100%", width: "11%", position: "relative" } },
 	          _react2.default.createElement(
 	            'div',
 	            { style: { backgroundColor: 'green', color: 'white', fontSize: "20px", width: "4.4%", marginLeft: "3.66%", height: sucHeight, position: "absolute", bottom: "38px" } },
@@ -21559,7 +21559,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { style: { height: "434px", width: "7.32%", position: "relative" } },
+	          { style: { height: "100%", width: "7.32%", position: "relative" } },
 	          _react2.default.createElement(
 	            'div',
 	            { style: { backgroundColor: 'red', color: 'white', width: "4.4%", fontSize: "20px", marginLeft: "1.46%", height: errHeight, position: "absolute", bottom: "38px" } },
