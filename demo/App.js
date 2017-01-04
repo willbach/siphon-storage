@@ -30,16 +30,16 @@ class App extends React.Component {
     let errHeight = (this.state.err/20).toString()+"px";
 
     return (
-      <div style={{height: "434px", width: "18.32%", flexDirection: 'row', display: 'flex'}}>
+      <div style={{height: "434px", width: "250px", flexDirection: 'row', display: 'flex'}}>
 
-        <div style={{height:"434px", width: "11%", position: "relative"}}>
-          <div style={{backgroundColor: 'green', color: 'white', fontSize: "20px", width: "4.4%", marginLeft: "3.66%", height: sucHeight, position: "absolute", bottom: "38px"}}>{this.state.suc}</div>
-          <div style={{width: "11%", position: "absolute", fontSize: "20px", bottom: "0px", color: 'white', backgroundColor: '#b20000', padding: '5px 0px', border: '2px solid black', borderRightWidth: '0px'}}>Successes</div>
+        <div style={{height:"434px", width: "150px", position: "relative"}}>
+          <div style={{backgroundColor: 'green', color: 'white', fontSize: "20px", width: "60px", marginLeft: "3.66%", height: sucHeight, position: "absolute", bottom: "38px"}}>{this.state.suc}</div>
+          <div style={{width: "150px", position: "absolute", fontSize: "20px", bottom: "0px", color: 'white', backgroundColor: '#b20000', padding: '5px 0px', border: '2px solid black', borderRightWidth: '0px'}}>Successes</div>
         </div>
 
-        <div style={{height:"434px", width: "7.32%", position: "relative"}}>
-          <div style={{backgroundColor: 'red', color: 'white', width: "4.4%", fontSize: "20px", marginLeft: "1.46%", height: errHeight, position: "absolute", bottom: "38px"}}>{this.state.err}</div>
-          <div style={{width: "7.32%", position: "absolute", fontSize: "20px", bottom: "0px", color: 'white', backgroundColor: '#b20000', padding: '5px 0px', border: '2px solid black', borderLeftWidth: '0px'}}>Errors</div>
+        <div style={{height:"434px", width: "100px", position: "relative"}}>
+          <div style={{backgroundColor: 'red', color: 'white', width: "60px", fontSize: "20px", marginLeft: "1.46%", height: errHeight, position: "absolute", bottom: "38px"}}>{this.state.err}</div>
+          <div style={{width: "100px", position: "absolute", fontSize: "20px", bottom: "0px", color: 'white', backgroundColor: '#b20000', padding: '5px 0px', border: '2px solid black', borderLeftWidth: '0px'}}>Errors</div>
         </div>
 
       </div>
