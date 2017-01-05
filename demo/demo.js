@@ -37,9 +37,13 @@ app.get('/temperatures', (req, res) => {
 
   })
 
-  for(let i = 0, counter = 100; i < 41268; i += Math.random() * 100, counter ++) {
+  for(let i = 0, counter = 100; i < 42000; counter++) {
+    let suc = Math.ceil(Math.random() * 98);
+    let err = Math.floor(Math.random() * 2);
+    i += suc + err;
+
     setTimeout( () => {
-      io.emit('requests', { suc: Math.ceil(Math.random() * 98), err: Math.floor(Math.random() * 2) });
+      io.emit('requests', { suc, err });
     }, 13 * counter)
   }
 
